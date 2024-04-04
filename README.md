@@ -1,5 +1,6 @@
 # zaker2-translation-tools
-Contains the code used to rebuild the script, as well as a manual for changing various things in the game.
+Contains the code used to rebuild the script, as well as a manual for changing various things in:
+Konjiki no Gash Bell!! Unare! Yuujou no Zakeru 2 / Zatch Bell! Electric Arena 2.
 
 zatchEA2_scriptV2_0x818460.bin is an updated script that adjusts the layout of the credits sequence when using the Minish Cap-style font.
 This is the ideal base to work with for other translations. With a hex editor you can go to address 0x818460 (rev 1.1) of the ROM and paste it there to update the game.
