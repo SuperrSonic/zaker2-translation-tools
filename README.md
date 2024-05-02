@@ -404,6 +404,7 @@ How to extend length of a voice line:
 (168 has gotta be the longest sound, ptr 3084FA08, so use that one's parameters to extend other sounds.)
 
 Pretty messy, right? The values below are for the original voices, not the new ones. It was tiring to make a note of every repoint so I stopped.
+
 <code>
 000 = YattaDaKiyomaro! = 0xCEE274
 001 = Unu! = 0xCF1C94
