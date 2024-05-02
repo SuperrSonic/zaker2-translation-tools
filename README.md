@@ -114,7 +114,7 @@ These were found by using corruption on the data that appears before the tile da
 In the case of this font, they all took the same space on screen (monospaced) but could still be adjusted further to display more characters.
 
 Zatch Collection roman font starts at 0x82E868
-
+<code>
 0x82E42A = !, 0x08 FE 07 08 05
 0x82E42F = ", 0x04 FF 07 08 0B
 0x82E434 = unk, 0x0A FD 08 10 0A
@@ -208,6 +208,7 @@ Zatch Collection roman font starts at 0x82E868
 0x82E5EC = {, 0x08 FE 07 08 03
 0x82E5F1 = |?, 0x08 FD 07 08 05
 0x82E5F1 = }, 0x08 FD 07 08 05
+</code>
 
 # Changing Credits Position
 
@@ -216,6 +217,7 @@ These are some addresses for adjusting the position of credits.
 The rest can be found out by continuing the pattern.
 These were found by comparing the size of the character and calculating the x pos from left to right.
 
+<code>
 0x7D5280 = x pos for 'Character Voice' 1
 0x7D52D4 = x pos Producers
 0x7D52F0 = x pos Direction
@@ -228,7 +230,7 @@ These were found by comparing the size of the character and calculating the x po
 0x7D53D0 = x pos Support Staff 2
 0x7D53EC = x pos Cooperation
 0x7D53FC = x pos Toei Animation
-
+</code>
 
 # Editing the Script
 
@@ -256,20 +258,25 @@ Luckily I found the hardcoded values to control which lines display each string!
 They are 32-bit little-endian values in a list, each value represents the number of a string as it exists on the script.
 
 For example open up the script .bin in a hex editor and find text for Rauzaruk Zatch's start dialogue:
+<code>
 "Kiyo"
 "Inside you lies great power, Zatch!"
+</code>
 
 The first string is Kiyo's name tag, copy the offset position where the 'K' starts and reverse it to 32-bit little-endian.
 0x1491 = 0x91140000 search for this value in the pointer table, now divide that offset (0x30) by 4, the result is 12 or 0xC in hex.
 
 Do the same for string number 2 and...
-
+<code>
 0x000C = "Kiyo"
 0x0152 = "Inside you lies great power, Zatch!"
+</code>
 
 Now you have a pattern! Reverse the bytes for little endian...
 
+<code>
 0C00 0000 5201 0000
+</code>
 
 This will only give you 1 search result, which is exactly what we wanted.
 
@@ -286,7 +293,7 @@ That makes the layout awkward in English, especially because there's no punctuat
 
 This also helped shed some light on one of the unused lines: "I'll show you a real nightmare!!!"
 If you follow the pattern:
-
+<code>
 "Zeno"
 "I'll show you a real nightmare!!!"
 "" (blank)
@@ -295,10 +302,12 @@ If you follow the pattern:
 "..."
 "" (blank)
 "" (blank)
+</code>
 And that ends the table for dialogue, so it is indeed a Zeno line.
 It's likely this line was supposed to be in the Extra Battle in Battle Mode because Zeno is always the bonus fight.
 
 // All the overflow hack fixes
+<code>
 0xFCE494 = We've met the enemy, ponygon ! (3rd line removal)
 0xFCE660 = Bari: Once and for all (2nd line added)
 0xFCE6B0 = Sherry: boy of the red book (2nd line added)
@@ -314,7 +323,7 @@ It's likely this line was supposed to be in the Extra Battle in Battle Mode beca
 0xFCE010 = ZofisWrith (added 2nd line)
 0xFCE070 = ZenoTorment (added 2nd line)
 0xFCE5C4 = PennyDestZatch (organize)
-
+</code>
 
 # String Pointer List for Unlocking Items
 
@@ -356,9 +365,7 @@ Therefore 86300 is:
 # Fonts Used for Graphics
 
 Kido's Up+B+R "SHOCK" sign is using a font called Mistral.
-
 The top-left blue logos for modes use Milford Condensed, bold, italic, 11pt, no aa.
-
 Arial was used for simple stuff.
 
 Minish Cap's font served as the alternate VWF for the main font, each character was checked against the game to match the width.
@@ -396,7 +403,7 @@ How to extend length of a voice line:
 (168 has gotta be the longest sound, ptr 3084FA08, so use that one's parameters to extend other sounds.)
 
 Pretty messy, right? The values below are for the original voices, not the new ones. It was tiring to make a note of every repoint so I stopped.
-
+<code>
 000 = YattaDaKiyomaro! = 0xCEE274
 001 = Unu! = 0xCF1C94
 002 = EeeaAeh! = 0xCF3734
@@ -567,7 +574,7 @@ Pretty messy, right? The values below are for the original voices, not the new o
 166 = GameOver = 0xF55F40
 167 = KonjikinoGashBell = 0xCE5CBC (0x2E8A)
 168 = Unare! Yuujo no Zakeru 2 = 0xCE8B58 (0x570A)
-
+</code>
 
 # Afterword
 
