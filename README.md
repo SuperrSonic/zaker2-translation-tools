@@ -20,7 +20,7 @@ These are a set of 5 bytes containing data about the character, 4th byte is the 
 All the 4th values need to be adjusted when changing the font.
 
 These were found by using corruption on the data that appears before the tile data of the font.
-
+<code>
 0x82A05E = !, 0x10 FF 0D 06 07
 0x82A063 = ", 0x06 00 0D 08 0B
 0x82A068 = unk, 0x0B 00 0B 0D 0B
@@ -107,6 +107,7 @@ These were found by using corruption on the data that appears before the tile da
 0x82A216 = y, 0x0C 00 09 07 07
 0x82A21B = z, 0x0C 00 09 07 10
 0x82A22F = ~, 0x05 00 07 07 07
+</code>
 
 # VWF Parameters for the Zatch Collection Mode
 
