@@ -379,11 +379,12 @@ Voice acting is a big feature in this game so dubbing it was pretty important to
 The GBA is ~~cool~~ _groovy_ hardware but I doubted the developers would put something complex for rendering audio, so I assumed whatever audio format was used _had_ to be something Audacity could pick up.
 
 So I used the import 'Raw Data' option and tried all the obvious settings:
-
+<code>
 Encoding: Signed 8-bit PCM
 Byte order: Little-endian
 Channels: 1
 Sample Rate: 11025
+</code>
 
 Of course, I imported the entire ROM but I started slicing it chunk by chunk, until it became more manageable.
 
