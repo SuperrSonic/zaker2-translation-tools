@@ -5,7 +5,18 @@ Konjiki no Gash Bell!! Unare! Yuujou no Zakeru 2 / Zatch Bell! Electric Arena 2.
 zatchEA2_scriptV2_0x818460.bin is an updated script that adjusts the layout of the credits sequence when using the Minish Cap-style font.
 This is the ideal base to work with for other translations. With a hex editor you can go to address 0x818460 (rev 1.1) of the ROM and paste it there to update the game.
 
-The code is here in case someone wants to build it for a different platform, do note, there is no endian detection, this tool relies on the hardware being little-endian to work correctly.
+The code is here in case someone wants to build it for a different platform, do note, there is no endianess detection, this tool relies on the hardware being little-endian to work correctly.
+
+
+# Penny's Present cheat
+This game is pretty easy to play, but I have noticed that when playing on a 3DS the button mashing minigame gets a bit annoying.
+In fact I've never been able to win at it on the 3DS, it just doesn't feel right mashing the buttons like that...
+
+But you're still required to beat this minigame if you want item #9.
+My solution is to patch the game so that each yellowtail eaten = 2 instead of 1.
+
+To do this, overwrite the value at 0x7D8E8 to 2 (or more, depends on how easy you want the game to be.)
+For the 1.1 rev, use address 0x7D7D4 instead.
 
 
 # Basic documentation
