@@ -18,6 +18,12 @@ My solution is to patch the game so that each yellowtail eaten = 2 instead of 1.
 To do this, overwrite the value at 0x7D8E8 to 2 (or more, depends on how easy you want the game to be.)
 For the 1.1 rev, use address 0x7D7D4 instead.
 
+# Unlock the event item without emulator cheats
+
+Go to offset 0x323E5, overwrite 3 with 2, to make the "13106" password unlock it.
+For rev 1.1 use 0x322F9.
+
+This may also make unlocking it have the same requirement as "Volcan Family".
 
 # Basic documentation
 
