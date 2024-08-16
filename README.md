@@ -2,6 +2,12 @@
 Contains the code used to rebuild the script, as well as a manual for changing various things in:
 Konjiki no Gash Bell!! Unare! Yuujou no Zakeru 2 / Zatch Bell! Electric Arena 2.
 
+**UPDATE** Aug16,2024
+- IPS patches for easy "Penny's Present" minigame, and unlocking item 52 within the game.
+- IPS patch to translate a hidden link cable menu in Zatch Collection, hold L+R to access it.
+- The MinishCap-style font messes up the credits, so "ScriptUpdateV2" will fix it, now available as an IPS patch.
+
+
 zatchEA2_scriptV2_0x818460.bin is an updated script that adjusts the layout of the credits sequence when using the Minish Cap-style font.
 This is the ideal base to work with for other translations. With a hex editor you can go to address 0x818460 (rev 1.1) of the ROM and paste it there to update the game.
 

@@ -1,6 +1,6 @@
 # How to know which patches to use
 
-"ZatchElectricArena2_rev1_x.bps" is the main translation, it is a BPS file which means it must be applied to clean/original/unmodified ROM. This format was chosen to prevent user-error, and avoid the 16 MB limit of IPS.
+"ZatchElectricArena2_rev1_x.bps" is the main translation, it is a BPS file which means it must be applied to a clean/original/unmodified ROM. This format was chosen to prevent user-error, and avoid the 16 MB limit of IPS.
 
 "ZatchElectricArena2_rev1_x.cheats" contains cheats that can be used with mGBA, they were used during the development of the translation to reach certain points of the game quickly.
 
